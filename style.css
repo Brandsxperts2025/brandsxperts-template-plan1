@@ -1,97 +1,69 @@
-:root {
-    --primary: #007bff;
-    --text: #333;
-    --bg: #fff;
-    --accent: #25D366;
+/* --- RESET Y BASES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text);
-    background: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* Fondo gris muy suave */
+    color: #333;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1100px;
+    width: 90%;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Loader */
-#loader {
-    position: fixed;
-    top:0; left:0; right:0; bottom:0;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+/* --- HERO SECTION (DEGRADADO MODERNO) --- */
+.hero-gradient {
+    /* Puedes cambiar estos colores por los que te gusten */
+    background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%); /* Degradado Rojo-Naranja vibrante */
+    color: white;
+    padding: 120px 0 150px; /* Espacio extra abajo para el efecto flotante */
+    text-align: center;
+    /* Un corte angular moderno en la parte inferior */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
-.spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-/* Hero */
-.hero {
-    background: #f8f9fa;
-    padding: 80px 0;
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para que resalte */
+}
+
+/* --- TARJETA PRINCIPAL (EFECTO FLOTANTE) --- */
+.main-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    margin-top: -80px; /* Esto hace que se monte sobre el header */
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 10;
     text-align: center;
 }
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.cta-button:hover {
-    filter: brightness(0.9);
+
+.content-body p {
+    font-size: 1.2rem;
+    color: #555;
+    white-space: pre-line; /* Respeta los saltos de línea del Excel */
 }
 
-/* Form */
-.smart-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.smart-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.submit-btn {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 50px;
+    background: #2c3e50;
+    color: #ecf0f1;
 }
 
-/* Utilities */
-.hidden { display: none !important; }
+footer p strong {
+    color: #FF416C; /* Color de acento del degradado */
+    font-size: 1.3rem;
+}
