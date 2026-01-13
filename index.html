@@ -3,62 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cargando...</title>
+    <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Core logic -->
-    <script type="module" src="main.js"></script>
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
 
-    <!-- Header / Hero -->
-    <header class="hero" style="display: none;">
-        <nav class="navbar">
-            <div class="logo" id="site-logo">Marca</div>
-        </nav>
-        <div class="hero-content">
-            <h1 id="hero-title">Título Principal</h1>
-            <p id="hero-subtitle">Subtítulo persuasivo aquí.</p>
-            <a href="#contacto" class="cta-button primary-btn">Empezar Ahora</a>
+    <header class="hero-gradient">
+        <div class="container header-content">
+            <h1>{{title}}</h1>
         </div>
     </header>
 
-    <!-- Content Sections -->
-    <main style="display: none;" id="main-content">
-        <section id="benefits">
-            <div class="container">
-                <h2>¿Por qué elegirnos?</h2>
-                <div class="grid" id="benefits-grid">
-                    <!-- Dynamic Content -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="contact-section">
-            <div class="container">
-                <h2>Agenda tu Cita</h2>
-                <form id="lead-form" class="smart-form">
-                    <input type="text" name="name" placeholder="Tu Nombre" required>
-                    <input type="email" name="email" placeholder="Tu Email" required>
-                    <input type="tel" name="phone" placeholder="Tu WhatsApp" required>
-                    <button type="submit" class="submit-btn">Enviar Solicitud</button>
-                    <div class="success-message" style="display:none;">¡Gracias! Te contactaremos pronto.</div>
-                </form>
-            </div>
+    <main class="container main-card">
+        <section class="content-body">
+            <p>{{content}}</p>
         </section>
     </main>
 
-    <footer style="display: none;" id="site-footer">
+    <footer>
         <div class="container">
-            <p>&copy; <span id="year">2026</span> <span id="footer-name">Empresa</span>. Todos los derechos reservados.</p>
-            <div class="legal-links">
-                <a href="#">Privacidad</a>
-                <a href="#">Términos</a>
-            </div>
+            <p>📞 Contacto y Reservas: <strong>{{phone}}</strong></p>
+            <small>© {{name}} - Impulsado por BrandsXperts Factory</small>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
