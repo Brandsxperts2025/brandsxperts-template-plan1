@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero-gradient">
-        <div class="container header-content">
-            <h1>{{title}}</h1>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="fade-in">{{title}}</h1>
+            <p class="subtitle">Experiencia única</p>
+            <a href="#contacto" class="btn-cta">Reservar Ahora</a>
         </div>
     </header>
 
-    <main class="container main-card">
-        <section class="content-body">
+    <main class="container main-content">
+        <section class="card">
+            <h2>Sobre Nosotros</h2>
+            <div class="divider"></div>
             <p>{{content}}</p>
+        </section>
+
+        <section class="card info-card">
+            <h3>📍 Información</h3>
+            <p>Estamos listos para atenderte.</p>
         </section>
     </main>
 
-    <footer>
+    <footer id="contacto">
         <div class="container">
-            <p>📞 Contacto y Reservas: <strong>{{phone}}</strong></p>
-            <small>© {{name}} - Impulsado por BrandsXperts Factory</small>
+            <h3>Contáctanos</h3>
+            <p class="phone-number">📞 {{phone}}</p>
+            <div class="socials">
+                <span>Facebook</span> | <span>Instagram</span>
+            </div>
+            <small>© {{name}} - Powered by BrandsXperts</small>
         </div>
     </footer>
 
